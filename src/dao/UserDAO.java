@@ -11,9 +11,7 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    // =========================
     // Register User
-    // =========================
     public boolean registerUser(User user) {
 
         String sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
@@ -41,9 +39,8 @@ public class UserDAO {
         }
     }
 
-    // =========================
+   
     // Login User
-    // =========================
     public User loginUser(String email, String password) {
 
         String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
@@ -73,9 +70,7 @@ public class UserDAO {
         return null;
     }
 
-    // =========================
     // Find User By Email
-    // =========================
     public User findByEmail(String email) {
 
         String sql = "SELECT * FROM users WHERE email = ?";
