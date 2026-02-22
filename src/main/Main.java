@@ -24,9 +24,7 @@ public class Main {
 
         while (true) {
 
-            // =========================
             // AUTH MENU
-            // =========================
             if (loggedInUser == null) {
 
                 System.out.println("\n=== AUTH MENU ===");
@@ -80,9 +78,8 @@ public class Main {
                 }
 
             }
-            // =========================
+            
             // ADMIN MENU
-            // =========================
             else if (loggedInUser.getRole() == Role.ADMIN) {
 
                 System.out.println("\n=== ADMIN MENU ===");
@@ -132,7 +129,7 @@ public class Main {
                         break;
 
                     case 3:
-                        // Simple revenue calculation
+                        
                         orderService.viewTotalRevenue();
                         break;
 
@@ -146,9 +143,8 @@ public class Main {
                         System.out.println("Invalid choice.");
                 }
             }
-            // =========================
+          
             // USER MENU
-            // =========================
             else {
 
                 System.out.println("\n=== USER MENU ===");
