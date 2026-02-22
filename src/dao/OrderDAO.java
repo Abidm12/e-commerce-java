@@ -26,7 +26,7 @@ public class OrderDAO {
 
             conn.setAutoCommit(false); // START TRANSACTION
 
-            // 1️⃣ Insert Order
+            //Insert Order
             int orderId;
 
             try (PreparedStatement orderStmt =
@@ -40,7 +40,7 @@ public class OrderDAO {
                 orderId = rs.getInt(1);
             }
 
-            // 2️⃣ Insert Order Items + Update Stock
+            //Insert Order Items + Update Stock
             for (OrderItem item : items) {
 
                 // Insert into order_items
@@ -66,7 +66,7 @@ public class OrderDAO {
                 }
             }
 
-            conn.commit(); // SUCCESS
+            conn.commit();
             return true;
 
         } catch (Exception e) {
