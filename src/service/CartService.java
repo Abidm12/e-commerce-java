@@ -14,9 +14,7 @@ public class CartService {
         cart = new HashMap<>();
     }
 
-    // =========================
     // Add Product to Cart
-    // =========================
     public void addToCart(Product product, int quantity) {
 
         if (quantity <= 0) {
@@ -29,17 +27,15 @@ public class CartService {
         System.out.println("Added to cart.");
     }
 
-    // =========================
+    
     // Remove Product
-    // =========================
     public void removeFromCart(Product product) {
         cart.remove(product);
         System.out.println("Removed from cart.");
     }
 
-    // =========================
-    // View Cart
-    // =========================
+    
+    // View Car
     public void viewCart() {
 
         if (cart.isEmpty()) {
@@ -64,9 +60,7 @@ public class CartService {
         System.out.println("Total: " + calculateTotal());
     }
 
-    // =========================
     // Calculate Total
-    // =========================
     public BigDecimal calculateTotal() {
 
         BigDecimal total = BigDecimal.ZERO;
@@ -84,9 +78,8 @@ public class CartService {
         return total;
     }
 
-    // =========================
-    // Convert Cart → OrderItems
-    // =========================
+=
+    // Convert Cart -> OrderItems
     public List<OrderItem> getOrderItems() {
 
         List<OrderItem> items = new ArrayList<>();
@@ -106,9 +99,8 @@ public class CartService {
         return items;
     }
 
-    // =========================
+  
     // Clear Cart
-    // =========================
     public void clearCart() {
         cart.clear();
     }
